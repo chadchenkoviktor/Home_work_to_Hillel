@@ -30,3 +30,9 @@ const date = `Приветствуем вас ${user}, в вашем возра�
 let sum = '10369';
 let exchange = sum.split("");
 console.log(exchange);
+
+let i = 0;
+while (i < 10){
+    console.log(i);
+    i++;
+}
