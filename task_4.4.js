@@ -1,12 +1,15 @@
 const numOrStr = prompt('Input number or string');
 
-switch (numOrStr) {
-    case null:
+switch (true) {
+    case numOrStr === null:
         console.log('Ви скасували');
         break;
-    case '':
+    case numOrStr.trim() === '':
         console.log('Empty String');
         break;
-    case numOrStr:
-        console.log('String'); 
+    case isNaN(+numOrStr):
+        console.log('number is Ba_NaN');
+        break;
+    default:
+        console.log('Ok!');
 } 
