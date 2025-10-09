@@ -1,5 +1,5 @@
 // Task 7.1
-task = 'task № 7.1';
+task = 'task № 5.1';
 console.log(task);
 
 let str = '';
