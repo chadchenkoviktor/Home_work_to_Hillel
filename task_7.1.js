@@ -2,30 +2,39 @@
 task = 'task № 7.1';
 console.log(task);
 
-let string = prompt('Введите слово или фразу');
-let leter1 = prompt('Введите букву которую будем удалять');
-let leter2 = prompt('Введите букву которую будем удалять');
+const line = prompt("Вкажіть ваш рядок");
+const letters = [];
+while (true) {    
+    const letter = prompt("Вкажіть букву яку необхідно прибрати з рядка");
+    if(!letter) break;
+    letters.push(letter);
+}
 
-function delitLeterFromWord (word, ...manyArgs) {
-     let newWord2;
-     let newWord3;
-     let newWord = word.split('');
+function deleteLettersFromWord (line, letters) {
+     let newWord;
+     let el;
+
+      newWord = line.split('');
      console.log(newWord);
-     let indexFirstDelEl = newWord.indexOf(...manyArgs);
-     if (indexFirstDelEl > -1) {
-          newWord2 = newWord.splice(indexFirstDelEl, 1);
-          console.log(newWord2); 
+
+     for (let i = 0; i < letters.length; i++) {
+           el = letters[i];
+           console.log(el);
+
+          for (let i = 0; i < newWord.length - 1; i++) {
+
+               let inEl = newWord.indexOf(el);
+
+               if (inEl > -1) {
+                    newWord.splice(inEl, 1); 
+               }
+          }
      }
 
-     let indexFirstDelEl2 = newWord.indexOf(leter2);
-      if (indexFirstDelEl2 > -1) {
-           newWord3 = newWord.splice(indexFirstDelEl2, 1);
-           console.log(newWord3);
-      } 
-      
-      let newStrWord = newWord.join('');
-          return console.log(newStrWord), alert(newStrWord); 
+            let newStrWord = newWord.join('');
+            
+     return console.log(newStrWord), alert(newStrWord); 
      
 }
 
-delitLeterFromWord(string, leter1, leter2);
+deleteLettersFromWord(line, letters);
