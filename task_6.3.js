@@ -1,4 +1,4 @@
-task = 'task № 7.3';
+task = 'task № 6.3';
 console.log(task);
 
 const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
