@@ -13,9 +13,10 @@ const user = {
      },
 
      getViewUser: function() {
-          console.log(`Name: ${this.name}, Age: ${this.age}, Plase of residence: city ${this.address.city}, street ${this.address.street}, home ${this.address.home}, ap. ${this.address.apartment}`)
+          return (`Name: ${this.name}, Age: ${this.age}, Plase of residence: city ${this.address.city}, street ${this.address.street}, home ${this.address.home}, ap. ${this.address.apartment}`)
      }
 
 }
 
-user.getViewUser();
+const info = user.getViewUser();
+console.log(info);
