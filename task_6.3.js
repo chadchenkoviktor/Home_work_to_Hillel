@@ -1,18 +1,74 @@
 task = 'task № 6.3';
 console.log(task);
 
-const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const delItem = +prompt('Введи число от 1 до 10');
-
-function removeElement (arrays, item) {
-
-        let index = arrays.indexOf(item);
+const familiars = {
+    contacts: [
+        {
+            name: 'Gena',
+            surname: 'Stolyarov',
+            jobTitle: 'stolyar',
+            fone: '345-45-63',
+            email:'Gena@gmail.com',
             
-        if (index !== -1) {
-            arrays.splice(index, 1); 
+            
+        },
+        {
+             name: 'Marina',
+            surname: 'Fomina',
+            jobTitle: 'merchandiser',
+            fone: '567-32-12',
+            email:'Fomina.M.@gmail.com',
+        },
+        {
+             name: 'Anton',
+            surname: 'Slepakov',
+            jobTitle: 'stendaper',
+            fone: '987-89-11',
+            email:'Toha@gmail.com',
+        },
+        {
+             name: 'Sergey Michaylovich',
+            surname: 'Zubko',
+            jobTitle: 'strech ceilings',
+            fone: '675-99-20',
+            email:'Zubko@gmail.com',
+        },
+        {
+             name: 'Tetyana',
+            surname: 'Cuzina',
+            jobTitle: "hairdresser's",
+            fone: '809-16-17',
+            email:'Cuzina@gmail.com',
+        },
+    ],
+
+    getContact: function(name) {
+        for (const item of this.contacts) {
+           const res = Object.values(item);
+           if (res[0] === name) {
+            return(item);
+            }
+        }   
+    },
+
+    addContact (newPerson) {
+        const six = this.contacts.push(newPerson);
+        console.log (this.contacts);
+        for (const newArray of this.contacts) {
+          console.log(newArray);
         }
-        console.log(arrays);
-        return arrays;
+        return six;
+    },
 }
 
-removeElement (array3,delItem);
+console.log(familiars.getContact('Gena'));
+
+let newPerson = {
+            name: 'Goga',
+            surname: 'Aboyan',
+            jobTitle: "dgigit",
+            fone: '666-16-15',
+            email:'Goga@gmail.com',
+        }
+
+console.log(familiars.addContact(newPerson));        
