@@ -28,13 +28,13 @@ const smolButton = document.querySelector('.but-a');
     
 })
 
-const newLi = document.getElementsByTagName("li");
-const newButforLi = document.getElementsByClassName('but-a');
-console.log(newLi);
-console.log(newButforLi);
-newButforLi.addEventListener('click', function(event) {
-    for (let item of list) {
-        list.removeChild(newLi[item]);
+const li = document.querySelector('li');
+const newlist = document.querySelector('ol');
+
+newlist.addEventListener('click', function(event) {
+    if (event.target.tagName === "BUTTON") {
+        event.target.newlist.removeChild('li');
+        console.log('Вы кликнули');
     }
-     
 })
+ 
