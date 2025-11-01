@@ -4,5 +4,5 @@ console.log(task);
 const wrapper = document.querySelector('.wrapper');
 
 wrapper.addEventListener('click', function(event) {
-  console.log(event.target);
+  console.log(`Була клікнута: ${event.target.textContent}`);
 })
