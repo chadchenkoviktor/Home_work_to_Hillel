@@ -9,19 +9,23 @@
 <body>
     <h1>Home work №12</h1>
     <div class="card">
-        <iframe class="frame" src ="https://www.example.com/page2"></iframe>
-        <a href="#" class="but_2">Повернення на попередне</a>
-        <a href="#" class="but_1">Перехід за посиланням</a>
-    </div>
-    <div class="wrapper">
-        <button class="but-1">Кнопка 1</button>
-        <button class="but-2"> Кнопка 2</button>
-        <button class="but-3">Кнопка 3</button>
-        <button class="but-4">Кнопка 4</button>
+        <form id="myForm" action="#" method="Post">
+            <h2>We would like to help you</h2>
+            <input type="text" placeholder="name" id="name" name="name" required>
+            <div class="fieldErrorName">Пожалуйста, введите корректное имя. Оно может содержать только буквы, пробелы и дефисы.</div>
+            <textarea placeholder="message" id="text" name="message"></textarea>
+            <div class="fieldErrorText">Вводите не меньше 5 символов</div>
+            <h3>How to ansver you ?</h3>
+            <input type="email" placeholder="email" id="email" name="email" required>
+            <div class="fieldErrorEmail">Введите корректный формат email</div>
+            <input type="tel" id="tel" placeholder="Phone number">
+            <div class="fieldErrorTel">Укажите верный формат телефона</div>
+            <input type="submit" class="but-1" value="Send message"></input>
+        </form>
     </div>
     <div class="card-3">
         <div class="head">
-            <h2>To do List</h2>
+            <h3>To do List</h3>
             <button class="but-b">Добавить задачу</button>
         </div>
         <ol class="list">
