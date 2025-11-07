@@ -15,27 +15,52 @@
     position: absolute;
     top: 70px;
     right: 30px;
-    width: 600px;
-    height: 400px;
+    width: 900px;
     background-color: #ecebeb;
     border-radius: 20px;
-    padding: 30px;
+    padding: 20px 10px 0px 10px;
     margin-top: 30px;
-    overflow: hidden;
+    
+}
+
+.screen {
+    width: 90%;
+}
+
+.img {
+    width: 100%;
+    margin: 0 auto;
 }
 
 .wrapper {
     display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 40px;
-    right: 30px;
-    width: 600px;
-    height: 150px;
-    background-color: #ecebeb;
-    border-radius: 20px;
-    padding: 30px;
-    margin-top: 30px;
+    justify-content: center;
+    gap: 6px;
+    width: auto;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+.but-b {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50px;
+    background-color: rgb(91, 89, 231);
+    border: none;
+    color: #fdfdfd;
+    font-size: 18px;
+    margin-top: 220px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.bul {
+    width: 12px;
+    height: 12px;
+    background-color: #7a7878;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 .frame {
@@ -204,19 +229,6 @@ h3 {
     color: black;
     font-size: 14px;
     margin-left: 20px;
-}
-
-.but-b {
-    height: 48px;
-    padding: 10px 20px;
-    border-radius: 6px;
-    background-color: rgb(147, 246, 76);
-    border: 1px solid #3248ef;
-    color: #3248ef;
-    font-size: 16px;
-    margin-right: 12px;
-    margin-bottom: 30px;
-    cursor: pointer;
 }
 
 .message {
