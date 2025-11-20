@@ -3,7 +3,7 @@ const task = 'task № 13.2';
 console.log(task);
 
 const form = document.getElementById('myForm');
-const name = document.getElementById('name');
+const nameInput = document.getElementById('name');
 const text = document.getElementById("text");
 const email = document.getElementById('email');
 const tel = document.getElementById('tel');
@@ -12,18 +12,18 @@ tel.addEventListener('focus', () => {
   if (!tel.value.startsWith('+380')) tel.value = '+380';
 });
 
-// універсальна функція для валідації
-function validateField({ value, regex, minLength = 0, errorElement }) {
-  
+//універсальна функція для валідації
+function validateField({value, regex, minLength = 0, errorElement}) {
+   
 }
 
-
+validateField();
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault();
+  event.preventDefault(); 
   const validations = [
     {
-      value: name.value,
+      value: nameInput.value,
       regex: /^[a-zA-Zа-яА-Я\s\-]+$/,
       errorElement: document.querySelector('.fieldErrorName'),
     },
@@ -47,4 +47,5 @@ form.addEventListener('submit', (event) => {
   const allValid = validations.every(validateField);
   if (!allValid) event.preventDefault();
 });
+
 

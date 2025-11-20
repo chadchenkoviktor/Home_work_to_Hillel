@@ -1,0 +1,25 @@
+.wrapper {
+    width: 400px;
+    margin: 150px auto;
+}
+
+p {
+    font-size: 32px;
+    color: rgb(53, 53, 61);
+    margin-bottom: 30px;
+}
+
+#timer {
+    font-size: 24px;
+    color: rgb(21, 110, 81);
+    margin-bottom: 20px;
+}
+
+#startBtn {
+    padding: 10px 20px;
+    background-color: #394389;
+    font-size: 20px;
+    color: beige;
+    border-radius: 6px;
+    border: none;
+}
