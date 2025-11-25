@@ -8,6 +8,8 @@ function kelvinToCelsius(kelvin){
 
 const changeCitys = document.querySelector('.citys');
 const viewData = document.querySelector('.data');
+const button = document.querySelector('.but');
+const lableBut = document.querySelector('.lableBut');
 
 changeCitys.addEventListener('click', function(event) {
     if(event.target.className === 'har') {
@@ -34,4 +36,8 @@ changeCitys.addEventListener('click', function(event) {
         })
         .catch(error => viewData.textContent = 'Ошибка загрузки данных');
     }
+})
+
+button.addEventListener('click', function () {
+    lableBut.textContent = 'Данные обновляются при выборе города!'
 })
