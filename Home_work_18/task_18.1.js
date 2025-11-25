@@ -45,3 +45,5 @@ const timer = new CountdownTimer(startSeconds, display);
 document.getElementById('startBtn').addEventListener('click', () => {
     timer.start();
 })
+
+
