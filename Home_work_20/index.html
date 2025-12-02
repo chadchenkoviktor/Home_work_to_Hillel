@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h3>TODO list</h3>
+        <ul class="list-group" id="todoList">
+            <li class="list-group-item todo-item">Купить хлеб</li>
+            <li class="list-group-item todo-item">Оплатить комуналку</li>
+            <li class="list-group-item todo-item">Навестить товарища</li>
+        </ul>
+
+        <!-- Модалка -->
+         <div class="modalfade" id="todoModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Текст задания</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body" id="modalText">Сюда вставляем текст задачи</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="task_20.1.js"></script>
+    
+</body>
+</html>
