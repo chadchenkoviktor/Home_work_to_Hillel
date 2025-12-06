@@ -14,10 +14,31 @@ tel.addEventListener('focus', () => {
 
 //універсальна функція для валідації
 function validateField({value, regex, minLength = 0, errorElement}) {
-   
-}
 
-validateField();
+  // проверка на пустоту
+  if (!value.trim()) {
+    errorElement;
+  } 
+
+  // проверка длины
+  else if (minLength && value.trim().length < minLength) {
+    errorElement.style.display = 'block';
+   } 
+
+  // проверка по регулярке (если она передана)
+  else if (regex && !regex.test(value.trim())) {
+    errorElement.style.display = 'block';
+  } else  {
+    errorElement.style.display = 'none';
+  }
+
+  // // вывод ошибки
+  // if (!errorElement) {
+  //   errorElement.style.display = 'none';
+  // }
+
+  return  // true если всё ок
+}
 
 form.addEventListener('submit', (event) => {
   event.preventDefault(); 
@@ -25,7 +46,7 @@ form.addEventListener('submit', (event) => {
     {
       value: nameInput.value,
       regex: /^[a-zA-Zа-яА-Я\s\-]+$/,
-      errorElement: document.querySelector('.fieldErrorName'),
+      errorElement: document.querySelector('.fieldErrorName').style.display = 'block',
     },
     {
       value: text.value,
@@ -45,7 +66,8 @@ form.addEventListener('submit', (event) => {
   ];
 
   const allValid = validations.every(validateField);
-  if (!allValid) event.preventDefault();
+  if (!allValid) return;
+  console.log("Форма валидна, можно отправлять!");
 });
 
 
