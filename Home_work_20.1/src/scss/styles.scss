@@ -1,0 +1,11 @@
+@import "~bootstrap/scss/bootstrap";
+.card {
+    position: relative;
+}
+
+.load {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+}

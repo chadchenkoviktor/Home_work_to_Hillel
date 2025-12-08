@@ -13,17 +13,18 @@ tel.addEventListener('focus', () => {
 });
 
 //універсальна функція для валідації
-function validateField({value, regex, minLength = 0, errorElement}) {
+function validateField({value, minLength = 0, regex, errorElement}) {
 
   // проверка на пустоту
   if (!value.trim()) {
-    errorElement;
+    errorElement.style.display = 'block';
   } 
 
   // проверка длины
-  else if (minLength && value.trim().length < minLength) {
-    errorElement.style.display = 'block';
-   } 
+  else if ( value.trim().length < minLength) {
+    errorElement;
+  
+  }
 
   // проверка по регулярке (если она передана)
   else if (regex && !regex.test(value.trim())) {
@@ -32,12 +33,6 @@ function validateField({value, regex, minLength = 0, errorElement}) {
     errorElement.style.display = 'none';
   }
 
-  // // вывод ошибки
-  // if (!errorElement) {
-  //   errorElement.style.display = 'none';
-  // }
-
-  return  // true если всё ок
 }
 
 form.addEventListener('submit', (event) => {
@@ -46,7 +41,7 @@ form.addEventListener('submit', (event) => {
     {
       value: nameInput.value,
       regex: /^[a-zA-Zа-яА-Я\s\-]+$/,
-      errorElement: document.querySelector('.fieldErrorName').style.display = 'block',
+      errorElement: document.querySelector('.fieldErrorName'),
     },
     {
       value: text.value,

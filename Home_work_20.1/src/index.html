@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">ToDo List</h1>
+
+        <form class="js--form form-inline mb-3">
+            <input type="text" name="value" class="form-control mr-2 js--form__input" placeholder="Нова задача" required>
+            <button class="btn btn-primary">Додати</button>
+        </form>
+
+        <ul class="list-group js--todos-wrapper">
+
+            <li class="list-group-item d-flex justify-content-between align-items-center todo-item">
+                <div>
+                    <input type="checkbox" class="mr-2">
+                    <span class="todo-item__description js--open-modal" style="cursor:pointer">Text</span>
+                </div>
+                <button class="btn btn-sm btn-danger todo-item__delete">Видалити</button>
+            </li>
+
+        </ul>
+    </div>
+
+    <div class="modal fade" id="todoModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <h5 class="modal-title">Текст задачі</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрити">
+                    <span class='cross'>&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p id="modalText"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../build/main.js"></script>
+</body>
+</html>
