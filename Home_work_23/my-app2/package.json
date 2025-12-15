@@ -1,0 +1,24 @@
+{
+  "name": "my-app2",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "css-loader": "^7.1.2",
+    "jquery": "^3.7.1",
+    "sass": "^1.95.0",
+    "sass-loader": "^16.0.6",
+    "style-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite": "^7.2.7"
+  }
+}
