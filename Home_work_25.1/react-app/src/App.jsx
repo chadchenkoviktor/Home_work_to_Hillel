@@ -1,60 +1,53 @@
-import { useState } from 'react'
+import { Component } from 'react'
 import smail_1 from './assets/1.png'
 import smail_2 from './assets/2.png'
 import smail_3 from './assets/3.png'
 import smail_4 from './assets/4.png'
-import ItemResult from './ItemResult'
+import Smile from './components/Smile'
 import './App.css'
 
-function App() {
-  const [count1, setCount1] = useState(0)
-  const [count2, setCount2] = useState(0)
-  const [count3, setCount3] = useState(0)
-  const [count4, setCount4] = useState(0)
-  
+class App extends Component () {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      smile1: 0,
+      smile2: 0,
+      smile3: 0,
+      smile4: 0,
+      winner: null,
+      isResultShown: false
+    }
+  }
+  
+  handleClick = (smileNumber) => {
+    this.setState({
+      `smile${smileNumber}`: this.state[`smile${smileNumber}`] + 1
+    })
+  } 
+
+  showResult = () => {
+    this.setState({
+      isResultShown: !this.state.isResultShown
+    })
+  }
+  
   return (
     <>
       <div className='card'>
-        <div onClick={() => setCount1((count1) => count1 + 1)}className='item'>
-          <img src={smail_1} className="smail" alt="smail" />
-          <span>
-           {count1}
-          </span>
-        </div>
-        <div onClick={() => setCount2((count2) => count2 + 1)}className='item'>
-          <img src={smail_2} className="smail" alt="smail" />
-          <span>
-           {count2}
-          </span>
-        </div>
-        <div onClick={() => setCount3((count3) => count3 + 1)} className='item'>
-          <img src={smail_3} className="smail" alt="smail" />
-          <span>
-           {count3}
-          </span>
-        </div>
-        <div onClick={() => setCount4((count4) => count4 + 1)}className='item'>
-          <img src={smail_4} className="smail" alt="smail" />
-          <span>
-           {count4}
-          </span>
-        </div>
+        <Smile index={1} handleClick={handleClick} smileLink={smail_1} count={this.state.smile1}/>
+        <Smile index={2} handleClick={handleClick} smileLink={smail_2} count={this.state.smile2}/>
+        <Smile index={3} handleClick={handleClick} smileLink={smail_3} count={this.state.smile3}/>
+        <Smile index={4} handleClick={handleClick} smileLink={smail_4} count={this.state.smile4}/>
       </div>
       <div className="card">
-        <button>
+        <button onClick={showResult}>
           Show Result
         </button>  
       </div>
-      <div className='item-result'>
-        <img src={smail_1} className="smail-result" alt="smail" />
-        <span>
-          {count4}
-        </span>
-      </div>
-      <ItemResult/>
+      {isResultShown ? <ItemResult/> : null}
     </>
   )
 }
 
-export default App
+export default App;
