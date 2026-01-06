@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.js" integrity="sha512-Olr8rkMYuxq3KpAPjYA/mAVYe7EIEP4RkhoAvD/qOrlauzE4CTvpQSg/cRX0/5Qreret4aobD0vg1xtjBqR7VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>task_29.1</title>
+  </head>
+  <body>
+    <div id="root">
+      <p>
+        Clicked: <span id="value">0</span> times
+        <br/>
+        Clicked: <span id="value2">0</span> times
+        <br/>
+        <button id="increment">increment</button>
+        <button id="decrement">decrement</button>
+      </p>
+    </div>
+  </body>
+  <script>
+    const TYPES = {
+      increment: 'INCREMENT',
+      decrement: 'DECREMENT',
+    }
+    function caunterReduser(state, action) {
+      if (typeof state === 'undefined') {
+        return 0;
+      }
+      switch (action.type) {
+        case TYPES.increment:
+          return state + 1;
+           case TYPES.decrement:
+          return state - 1;
+        default:
+          return state
+      }
+    }
+
+    const store = Redux.createStore(caunterReduser);
+
+    document.getElementById('increment').addEventListener('click', () => {
+      const action = { type: TYPES.increment }
+
+      store.dispatch(action);
+    })
+
+    document.getElementById('decrement').addEventListener('click', () => {
+      const action = { type: TYPES.decrement }
+
+      store.dispatch(action);
+    })
+
+    const valueEl = document.querySelector('#value');
+    const valueEl2 = document.querySelector('#value2');
+
+    store.subscribe(() => {
+      valueEl.textContent = store.getState().toString();
+      valueEl2.textContent = store.getState().toString();
+    })
+  </script>
+</html>
