@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+
+.img {
+    height: 300px;
+}
+
+.wrapper {
+    margin-left: 30px;
+    margin-top: -10px;
+}
+
+p {
+    width: 800px;
+    margin-top: 20px;
+}
