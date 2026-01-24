@@ -1,0 +1,10 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    height: 500px;
+    background-color: #fff;
+    padding-top: 50px;
+    margin: 170px auto;
+}
+
