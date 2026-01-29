@@ -1,0 +1,72 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 14",
+            "price": 999,
+            "category": "Phones",
+            "description": "Latest Apple smartphone with advanced camera system",
+            "photo": "https://via.placeholder.com/300?text=iPhone+14",
+            "inStock": true,
+            "rating": 4.5
+        },
+        {
+            "id": 2,
+            "name": "MacBook Pro",
+            "price": 1999,
+            "category": "Laptops",
+            "description": "Powerful laptop for professionals",
+            "photo": "https://via.placeholder.com/300?text=MacBook+Pro",
+            "inStock": true,
+            "rating": 4.8
+        },
+        {
+            "id": 3,
+            "name": "iPad Air",
+            "price": 599,
+            "category": "Tablets",
+            "description": "Versatile tablet for work and entertainment",
+            "photo": "https://via.placeholder.com/300?text=iPad+Air",
+            "inStock": true,
+            "rating": 4.6
+        },
+        {
+            "id": 4,
+            "name": "AirPods Pro",
+            "price": 249,
+            "category": "Audio",
+            "description": "Wireless earbuds with noise cancellation",
+            "photo": "https://via.placeholder.com/300?text=AirPods+Pro",
+            "inStock": false,
+            "rating": 4.7
+        },
+        {
+            "id": 5,
+            "name": "Apple Watch Series 8",
+            "price": 399,
+            "category": "Wearables",
+            "description": "Advanced fitness tracking smartwatch",
+            "photo": "https://via.placeholder.com/300?text=Apple+Watch",
+            "inStock": true,
+            "rating": 4.4
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "email": "user@example.com",
+            "login": "user",
+            "password": "123",
+            "name": "John Doe",
+            "role": "user"
+        },
+        {
+            "id": 2,
+            "email": "admin@example.com",
+            "login": "admin",
+            "password": "123",
+            "name": "Admin User",
+            "role": "admin"
+        }
+    ]
+}
